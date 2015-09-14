@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     get '/login' , to: 'login#index'
+    get '/logout' , to: 'tweets#destroy'
     get '/tweets', to: 'tweets#index'
     get '/auth/:provider/callback', to:'sessions#create'
     root to: "login#index"
