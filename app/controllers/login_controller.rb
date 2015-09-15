@@ -7,4 +7,5 @@ class LoginController < ApplicationController
   		render :template => 'login/index'
   	end
   end
+
 end
