@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 	before_action :create_client
 	def index
+		if session[:user_id]
 		@user = User.find(session[:user_id])
 		@tweets = @client.user_timeline(@client.user.id).take(100)
 		max_tweet = TweetOwner.count
@@ -17,6 +18,9 @@ class TweetsController < ApplicationController
 		tweet_save	
 		#render :json => @tweets		
 		render 'index'	
+	else
+		render :template => 'login/index'
+  	end
 	end
 
 

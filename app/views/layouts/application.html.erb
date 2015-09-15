@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo</title>
+  <title>Twitter Login</title>
   <%= stylesheet_link_tag    :application %>
   <%= stylesheet_link_tag    :login %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,27 +9,27 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
-<% if current_user %>
 <div class="container">
+<% if current_user %>
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" class="active"><a href="/logout">Sign Out</a></li>
           </ul>
         </nav>
-       <table>
-		<tr><td><%= image_tag @user.profile_image, :class => "img-circle" %></td>
-			<td><h2>&nbsp;<%= current_user.name %></h2></td>
-		</tr>
-	  </table>
+        <table>
+		        <tr>
+              <td><%= image_tag @user.profile_image, :class => "img-circle" %></td>
+			        <td><h2>&nbsp;<%= current_user.name %></h2></td>
+		        </tr>
+	      </table>
       </div>
       <div class="jumbotron">
-        <h3>About You</h>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <h3>About You</h3>
+        <p class="lead"><%= current_user.description %></p>
       </div>
-     <%=yield %>
+      <% end %>
+      <%=yield %>
       </div>
-    </div>
-<% end %>
 </body>
 </html>

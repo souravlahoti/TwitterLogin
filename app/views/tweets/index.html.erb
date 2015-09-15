@@ -1,9 +1,10 @@
-<table border="1">
+
+<table class="table table-striped">
 <tr>
 <th>Tweet UrL</th>
 <th>Tweet</th>
 <th>Date</th>
-<th>User</th>
+</tr>
 <% @tweets.each do |t| %>
 <% if !t.urls.nil? %>
 <% t.urls.each do |u| %>
@@ -11,11 +12,11 @@
 <td><%= u.url %></td>
 <td><%= t.text %></td>
 <td><%= t.created_at%></td>
-<td><%= t.user.name%></td>
 </tr>
 <%end%>
 <%end%>
 <% end %>
 </table>
-
-<p>Max tweets by <%= @max_user %> Tweets : <%= @max %>
+<br/>
+<center>
+<p>Max tweets by <%= @max_user %> Tweets : <%= @max %></p></center>

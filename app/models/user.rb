@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
 			name: auth_hash.info.name,
 			token: auth_hash.credentials.token,
 			profile_image: auth_hash.info.image,
-			secret: auth_hash.credentials.secret
+			secret: auth_hash.credentials.secret,
+			description: auth_hash.info.description
 		)
 		user
 	end	
