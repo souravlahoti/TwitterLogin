@@ -11,10 +11,25 @@
 <body>
 <% if current_user %>
 <div class="container">
-<%= image_tag @user.profile_image, :class => "img-circle" %>
-<p>Welcome <%= current_user.name %></p>
-</div>
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/logout">Sign Out</a></li>
+          </ul>
+        </nav>
+       <table>
+		<tr><td><%= image_tag @user.profile_image, :class => "img-circle" %></td>
+			<td><h2>&nbsp;<%= current_user.name %></h2></td>
+		</tr>
+	  </table>
+      </div>
+      <div class="jumbotron">
+        <h3>About You</h>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div>
+     <%=yield %>
+      </div>
+    </div>
 <% end %>
-<%= yield %>
 </body>
 </html>
