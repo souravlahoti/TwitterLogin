@@ -10,7 +10,10 @@
 </head>
 <body>
 <% if current_user %>
-<p class="navbar-text navbar-right">Welcome <%= current_user.name %></p>
+<div class="container">
+<%= image_tag @user.profile_image, :class => "img-circle" %>
+<p>Welcome <%= current_user.name %></p>
+</div>
 <% end %>
 <%= yield %>
 </body>
