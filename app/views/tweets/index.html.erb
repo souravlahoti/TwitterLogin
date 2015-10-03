@@ -5,16 +5,12 @@
 <th>Tweet</th>
 <th>Date</th>
 </tr>
-<% @tweets.each do |t| %>
-<% if !t.urls.nil? %>
-<% t.urls.each do |u| %>
+<% @url_tweet.each do |t| %>
 <tr>
-<td><%= u.url %></td>
-<td><%= t.text %></td>
-<td><%= t.created_at%></td>
+<td><%= t.url %></td>
+<td><%= t.tweet %></td>
+<td><%= t.date%></td>
 </tr>
-<%end%>
-<%end%>
 <% end %>
 </table>
 <br/>

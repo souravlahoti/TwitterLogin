@@ -16,7 +16,8 @@ class TweetsController < ApplicationController
 			end
 		end
 		tweet_save	
-		#render :json => @tweets		
+		#render :json => @tweets	
+		@url_tweet = Tweet.all
 		render 'index'	
 	else
 		render :template => 'login/index'
@@ -41,7 +42,8 @@ class TweetsController < ApplicationController
 
 	private 
 	def tweet_save
-		@tweets.each do |t|			new_tweet = Tweet.new
+		@tweets.each do |t|			
+			new_tweet = Tweet.new
 			tweet_owner = TweetOwner.new
 			if !t.urls.nil?
 				t.urls.each do |u|
@@ -56,7 +58,6 @@ class TweetsController < ApplicationController
 					tweet_owner.uid = t.user.id
 					tweet_owner.name = t.user.name
 					tweet_owner.save		
-
 				end
 			end
 		end
