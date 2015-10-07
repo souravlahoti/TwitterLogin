@@ -28,6 +28,7 @@ It was a part of an interview process where I was asked to build the web app.
 ## Installation
 
 Steps to install the app.
+
 1. Firstly clone my project.<br>
 2. To install the specfic gems'bundle install'<br>
 3. Start the server 'rails server'<br>
