@@ -28,9 +28,9 @@ It was a part of an interview process where I was asked to build the web app.
 ## Installation
 
 Steps to install the app.
-1. Firstly clone my project.
-2. To install the specfic gems'bundle install'
-3. Start the server 'rails server'
+1. Firstly clone my project.<br>
+2. To install the specfic gems'bundle install'<br>
+3. Start the server 'rails server'<br>
 4. Goto 'localhost:5000/login' and click sign in using Twitter
 
 ## API Reference
