@@ -31,8 +31,9 @@ Steps to install the app.
 
 1. Firstly clone my project.<br>
 2. To install the specfic gems'bundle install'<br>
-3. Start the server 'rails server'<br>
-4. Goto 'localhost:5000/login' and click sign in using Twitter
+3. Create your Twitter API key and replace it in the tweets_controller.rb and twitter_credentials.rb inside initializers.
+4. Start the server 'rails server'<br>
+5. Goto 'localhost:5000/login' and click sign in using Twitter
 
 ## API Reference
 
